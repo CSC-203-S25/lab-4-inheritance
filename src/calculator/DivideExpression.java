@@ -1,25 +1,16 @@
 package calculator;
 
-public class DivideExpression
-   implements Expression
+public class DivideExpression extends BinaryExpression
 {
-   private final Expression lft;
-   private final Expression rht;
 
    public DivideExpression(final Expression lft, final Expression rht)
    {
-      this.lft = lft;
-      this.rht = rht;
+      super(lft, rht);
    }
 
-   public String toString()
-   {
-      return "(" + lft + " / " + rht + ")";
-   }
-
-   public double evaluate(final Bindings bindings)
-   {
-      return lft.evaluate(bindings) / rht.evaluate(bindings);
+   @Override
+   protected double applyOperator(double lftOprnt, double rhtOprnt) {
+      return lftOprnt / rhtOprnt;
    }
 }
 

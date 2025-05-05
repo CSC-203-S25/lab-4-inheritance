@@ -1,24 +1,18 @@
 package calculator;
 
-public class AddExpression
-   implements Expression
+public class AddExpression extends BinaryExpression
 {
-   private final Expression lft;
-   private final Expression rht;
+
 
    public AddExpression(final Expression lft, final Expression rht)
    {
-      this.lft = lft;
-      this.rht = rht;
+      super(lft, rht);
    }
 
-   public String toString()
+   @Override
+   protected double applyOperator(double lftOprnt, double rhtOprnt)
    {
-      return "(" + lft + " + " + rht + ")";
+      return lftOprnt + rhtOprnt;
    }
 
-   public double evaluate(final Bindings bindings)
-   {
-      return lft.evaluate(bindings) + rht.evaluate(bindings);
-   }
 }
