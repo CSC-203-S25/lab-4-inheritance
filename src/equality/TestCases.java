@@ -1,3 +1,5 @@
+//Ross Poletti and Arjan Ellingson
+
 package equality;
 
 import static org.junit.Assert.assertEquals;

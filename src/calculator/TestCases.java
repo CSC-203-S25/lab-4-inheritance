@@ -1,3 +1,4 @@
+//Ross Poletti and Arjan Ellingson
 package calculator;
 
 import java.lang.reflect.Method;
