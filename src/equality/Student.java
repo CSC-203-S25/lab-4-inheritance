@@ -23,29 +23,21 @@ public class Student
    {
       int result = 1;
 
-      result = result * 41 + this.prefix.hashCode();
-      result = result * 41 + this.number.hashCode();
-      result = result * 41 + this.enrollment;
-      result = result * 41 + this.startTime.getHour();
-      result = result * 41 + this.startTime.getMinute();
-      result = result * 41 + this.endTime.getHour();
-      result = result * 41 + this.endTime.getMinute();
-
+      result = result * 41 + this.name.hashCode();
+      result = result * 41 + this.age;
+      result = result * 41 + this.currentCourses.hashCode();
       return result;
+
    }
 
    public boolean equals(Object obj) {
       if (this.getClass() != obj.getClass()) {
          return false;
       }
-      CourseSection othr = (CourseSection) obj;
+      Student other = (Student) obj;
 
-      return this.prefix == othr.prefix &&
-              this.number == othr.number &&
-              this.enrollment == othr.enrollment &&
-              this.startTime.getHour() == othr.startTime.getHour() &&
-              this.startTime.getMinute() == othr.startTime.getMinute() &&
-              this.endTime.getHour() == othr.endTime.getHour() &&
-              this.endTime.getMinute() == othr.endTime.getMinute();
+      return this.name == other.name &&
+              this.age == other.age &&
+              this.currentCourses == other.currentCourses;
    }
 }
