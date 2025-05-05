@@ -5,7 +5,7 @@ public class SubtractExpression
 
    public SubtractExpression(final Expression lft, final Expression rht)
    {
-      super(lft, rht);
+      super(lft, rht, " - ");
 
    }
 

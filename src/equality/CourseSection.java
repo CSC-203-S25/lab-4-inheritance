@@ -38,8 +38,14 @@ public class CourseSection
       if (this.getClass() != obj.getClass()) {
          return false;
       }
+
       CourseSection othr = (CourseSection) obj;
 
+      if (this.prefix == null || othr.prefix == null ||
+              this.startTime == null || othr.startTime == null ||
+              this.endTime == null || othr.endTime == null) {
+         return false;
+      }
       return this.prefix == othr.prefix &&
               this.number == othr.number &&
               this.enrollment == othr.enrollment &&

@@ -5,7 +5,7 @@ public class MultiplyExpression
 
    public MultiplyExpression(final Expression lft, final Expression rht)
    {
-      super(lft, rht);
+      super(lft, rht, " * ");
    }
 
 

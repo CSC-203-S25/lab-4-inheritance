@@ -34,10 +34,16 @@ public class Student
       if (this.getClass() != obj.getClass()) {
          return false;
       }
+
       Student other = (Student) obj;
+
+      if (this.name == null || other.name == null ||
+              this.currentCourses == null || other.currentCourses == null) {
+         return false;
+      }
 
       return this.name == other.name &&
               this.age == other.age &&
-              this.currentCourses == other.currentCourses;
+              this.currentCourses.equals(other.currentCourses);
    }
 }
